@@ -6,12 +6,12 @@
     <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/spacelab/bootstrap.min.css" rel="stylesheet">
 
 </head>
-<body style="background-color:black">
+<body style="background-image:url('../images/home-wormhole1.gif'); background-repeat: no-repeat; background-size: 100%">
 
-<br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br />
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
-        <div class="panel panel-info">
+        <div class="panel panel-info" style="opacity: 0.85">
             <div class="panel-heading">
                 <h3 class="panel-title">Create your account here</h3>
             </div>
@@ -38,41 +38,6 @@
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" class="form-control" required />
                             <span class="help-block">Required</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="first_name">First Name</label>
-                            <input type="text" id="first_name" name="first_name" class="form-control" />
-                            <span class="help-block">Not required</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="last_name">Last Name</label>
-                            <input type="text" id="last_name" name="last_name" class="form-control" />
-                            <span class="help-block">Not required</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="address1">Address 1</label>
-                            <input type="text" id="address1" name="address1" class="form-control" />
-                            <span class="help-block">Not required</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="address2">Address 2</label>
-                            <input type="text" id="address2" name="address2" class="form-control" />
-                            <span class="help-block">Not required</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="apt_suite">Apt/Suite #</label>
-                            <input type="text" id="apt_suite" name="apt_suite" class="form-control" />
-                            <span class="help-block">Not required</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="city">City</label>
-                            <input type="text" id="city" name="city" class="form-control" />
-                            <span class="help-block">Not required</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="state">State</label>
-                            <input type="text" id="state" name="state" class="form-control" />
-                            <span class="help-block">Not required</span>
                         </div>
                         <div class="form-group">
                             <label for="country">Country</label>
@@ -319,12 +284,7 @@
                                 <option value="Zambia">Zambia</option>
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select>
-                            <span class="help-block">Not required</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="zip">Zip Code</label>
-                            <input type="text" class="form-control" id="zip" name="zip" />
-                            <span class="help-block">Usually a 5 digit number</span>
+                            <span class="help-block">Required</span>
                         </div>
                         <hr />
                         <div class="form-group">
@@ -334,6 +294,7 @@
                             @endforeach
                             @endif
                             <button type="submit" onclick="return check()" class="btn btn-primary">Create Account</button>
+                            {{ HTML::linkRoute('session.create','Back to Login Page',array(),array('class'=>'pull-right', 'style'=>'color:blue')) }}
                         </div>
                     </div>
                 {{ Form::close() }}

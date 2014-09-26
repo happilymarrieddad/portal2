@@ -11,7 +11,8 @@ class UserComposer
     {
         $view->with([
             'username' => Auth::user()->username,
-            'email'    => Auth::user()->email
+            'email'    => Auth::user()->email,
+            'admin'    => Auth::user()->admin
         ]);
     }
 }

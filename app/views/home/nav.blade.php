@@ -3,6 +3,8 @@
 
 @section('title') @yield('home-title') @stop
 
+@section('body') background-image:url('../images/warhammer-background.png'); background-size:100%; background-repeat:no-repeat @stop
+
 @section('css')  @stop
 
 @section('subnav')

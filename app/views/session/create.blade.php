@@ -7,9 +7,9 @@
 
 @section('content')
 <br /><br />
-<div class="panel panel-info" style="opacity: 0.95">
+<div class="panel panel-info" style="opacity: 0.85">
     <div class="panel-heading">
-        <h3 class="panel-title">Welcome to the login page</h3>
+        <h3 class="panel-title">Please log in to enter unknown space...</h3>
     </div>
     <div class="panel-body">
         {{ Form::open(array('route'=>'session.store', 'method'=>'post')) }}
@@ -30,7 +30,7 @@
                         @endforeach
                     @endif
                     <button type="submit" class="btn btn-primary">Login</button>
-                    {{ HTML::linkRoute('user.create', 'Create a new account', array(), array('class'=>'btn btn-primary pull-right')) }}
+                    {{ HTML::linkRoute('user.create', 'Create a new account', array(), array('style'=>'color:red', 'class'=>'pull-right')) }}
                 </div>
             </div>
         {{ Form::close() }}

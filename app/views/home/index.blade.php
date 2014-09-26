@@ -3,8 +3,6 @@
 
 @section('home-title') Home Page @stop
 
-@section('home-active') active @stop
-
 @section('home-content')
 
 <div class="panel panel-primary">

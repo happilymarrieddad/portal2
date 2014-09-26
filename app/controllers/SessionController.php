@@ -20,6 +20,7 @@ class SessionController extends \BaseController {
 	 */
 	public function create()
 	{
+        if(Auth::check()) return Redirect::route('home.index');
 		return View::make('session.create');
 	}
 

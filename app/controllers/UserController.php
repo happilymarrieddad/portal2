@@ -34,15 +34,7 @@ class UserController extends \BaseController {
         $usern = Input::get('username');
 		$pass  = Input::get('password');
         $email = Input::get('email');
-        $fname = Input::get('first_name');
-        $lname = Input::get('last_name');
-        $addr1 = Input::get('address1');
-        $addr2 = Input::get('address2');
-        $apsut = Input::get('apt_suite');
-        $city  = Input::get('city');
-        $state = Input::get('state');
         $cntry = Input::get('country');
-        $zip   = Input::get('zip');
 
         $validator = Validator::make(
             array(
@@ -67,15 +59,15 @@ class UserController extends \BaseController {
         $user->username   = $usern;
         $user->password   = Hash::make($pass);
         $user->email      = $email;
-        $user->first_name = $fname;
-        $user->last_name  = $lname;
-        $user->address1   = $addr1;
-        $user->address2   = $addr2;
-        $user->apt_suite  = $apsut;
-        $user->city       = $city;
-        $user->state      = $state;
+        $user->first_name = '';
+        $user->last_name  = '';
+        $user->address1   = '';
+        $user->address2   = '';
+        $user->apt_suite  = '';
+        $user->city       = '';
+        $user->state      = '';
         $user->country    = $cntry;
-        $user->zip        = $zip;
+        $user->zip        = '';
         $user->admin      = false;
         $user->active     = true;
         $user->created_at = time();
