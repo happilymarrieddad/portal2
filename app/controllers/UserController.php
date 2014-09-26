@@ -86,7 +86,6 @@ class UserController extends \BaseController {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  int  $id
 	 * @return Response
 	 */
 	public function show()
@@ -99,7 +98,6 @@ class UserController extends \BaseController {
 	/**
 	 * Show the form for editing the specified resource.
 	 *
-	 * @param  int  $id
 	 * @return Response
 	 */
 	public function edit()
@@ -112,12 +110,46 @@ class UserController extends \BaseController {
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update()
 	{
-		//
+        $email = Input::get('a');
+        $fname = Input::get('b');
+        $lname = Input::get('c');
+        $address1 = Input::get('d');
+        $address2 = Input::get('e');
+        $aptsuite = Input::get('f');
+        $city = Input::get('g');
+        $state = Input::get('h');
+        $country = Input::get('i');
+        $zip = Input::get('j');
+
+        try
+        {
+            $user = User::find(Auth::user()->id);
+            $user->email = $email;
+            $user->first_name = $fname;
+            $user->last_name = $lname;
+            $user->address1 = $address1;
+            $user->address2 = $address2;
+            $user->apt_suite = $aptsuite;
+            $user->city = $city;
+            $user->state = $state;
+            $user->country = $country;
+            $user->zip = $zip;
+            $user->save();
+        }catch(Exception $e)
+        {
+            $error = new Error();
+            $error->message = 'User: ' . Auth::user()->id . '  Message: ' . $e->getMessage();
+            $error->line = $e->getLine();
+            $error->file = 'UserController.php';
+            $error->time = time();
+            $error->save();
+            return [0, 'User Profile failed to updated because: ' . $e->getMessage() . ' at line ' . $e->getLine()];
+        }
+        return [1, 'Profile updated successfully!'];
 	}
 
 

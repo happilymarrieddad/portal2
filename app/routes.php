@@ -32,6 +32,7 @@ Route::get('/profile/show', 'UserController@show');
 Route::get('/profile/edit', 'UserController@edit');
 Route::get('/profile/password', 'PasswordController@edit');
 Route::post('/profile/passUpdate', 'PasswordController@update');
+Route::post('/profile/update', 'UserController@update');
 Route::resource('user', 'UserController');
 Route::resource('admin', 'AdminController', ['only'=>['index']]);
 
