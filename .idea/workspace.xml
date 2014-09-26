@@ -41,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="edit.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/user/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="304" column="0" selection-start="18476" selection-end="18476" vertical-scroll-proportion="-26.916666" vertical-offset="269" max-vertical-offset="1050">
+            <state line="21" column="14" selection-start="728" selection-end="728" vertical-scroll-proportion="0.42395693" vertical-offset="0" max-vertical-offset="1050">
               <folding>
                 <element signature="tag#select#0;tag#div#8;tag#div#1;tag#div#0" expanded="false" />
               </folding>
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profileEdit.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="profileEdit.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/profileEdit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="51" selection-start="746" selection-end="746" vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="810">
+            <state line="47" column="0" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
@@ -140,9 +140,9 @@
         <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/views/user/nav.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/user/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/public/js/profileEdit.js" />
+        <option value="$PROJECT_DIR$/app/views/user/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -912,15 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/user/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="304" column="0" selection-start="18476" selection-end="18476" vertical-scroll-proportion="-26.916666" vertical-offset="269" max-vertical-offset="1050">
-          <folding>
-            <element signature="tag#select#0;tag#div#8;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/PasswordController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="13" selection-start="1364" selection-end="1804" vertical-scroll-proportion="-7.8333335" vertical-offset="1042" max-vertical-offset="1785">
@@ -937,8 +928,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/profileEdit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="51" selection-start="746" selection-end="746" vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="810">
+        <state line="47" column="0" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/user/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="14" selection-start="728" selection-end="728" vertical-scroll-proportion="0.42395693" vertical-offset="0" max-vertical-offset="1050">
+          <folding>
+            <element signature="tag#select#0;tag#div#8;tag#div#1;tag#div#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
