@@ -32,10 +32,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/user/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="5" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.4681648" vertical-offset="0" max-vertical-offset="801">
+            <state line="20" column="53" selection-start="988" selection-end="988" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="465">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="30" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.56179774" vertical-offset="480" max-vertical-offset="1950">
               <folding />
             </state>
           </provider>
@@ -90,7 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/armies/fantasy/dwarfs/index.blade.php" />
         <option value="$PROJECT_DIR$/app/views/armies/fantasy/beastmen/nav.blade.php" />
         <option value="$PROJECT_DIR$/app/views/armies/fantasy/bretonnia/nav.blade.php" />
         <option value="$PROJECT_DIR$/app/views/armies/fantasy/chaoswarriors/nav.blade.php" />
@@ -141,6 +149,7 @@
         <option value="$PROJECT_DIR$/app/composers/Composer/UserComposer.php" />
         <option value="$PROJECT_DIR$/app/controllers/PasswordController.php" />
         <option value="$PROJECT_DIR$/app/views/user/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/config/database.php" />
       </list>
     </option>
   </component>
@@ -493,6 +502,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portal2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portal2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="composers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -591,13 +618,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/armies/fantasy/daemons/nav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="38" selection-start="472" selection-end="472" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/armies/fantasy/darkelves/nav.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="40" selection-start="478" selection-end="478" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="450">
@@ -948,7 +968,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/user/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.4681648" vertical-offset="0" max-vertical-offset="801">
+        <state line="20" column="53" selection-start="988" selection-end="988" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="30" selection-start="1947" selection-end="1947" vertical-scroll-proportion="0.56179774" vertical-offset="480" max-vertical-offset="1950">
           <folding />
         </state>
       </provider>
