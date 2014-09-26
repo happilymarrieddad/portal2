@@ -1,6 +1,6 @@
 <?php
 
-class SessionController extends \BaseController {
+class AdminController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +9,8 @@ class SessionController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		if(!Auth::check() || !Auth::user()->admin) return Redirect::route('home.index');
+        else return View::make('admin.index');
 	}
 
 
@@ -20,8 +21,7 @@ class SessionController extends \BaseController {
 	 */
 	public function create()
 	{
-        if(Auth::check()) return Redirect::route('home.index');
-		return View::make('session.create');
+		//
 	}
 
 
@@ -32,16 +32,7 @@ class SessionController extends \BaseController {
 	 */
 	public function store()
 	{
-		$email = Input::get('email');
-        $pass  = Input::get('password');
-        if (Auth::attempt(array('email' => $email, 'password' => $pass)))
-        {
-            $user = User::find(Auth::user()->id);
-            $user->last_login = time();
-            $user->save();
-            return Redirect::route('home.index');
-        }
-        else Redirect::back();
+		//
 	}
 
 
@@ -84,17 +75,13 @@ class SessionController extends \BaseController {
 	/**
 	 * Remove the specified resource from storage.
 	 *
+	 * @param  int  $id
 	 * @return Response
 	 */
 	public function destroy($id)
 	{
-        //
+		//
 	}
 
-    public function logout()
-    {
-        Auth::logout();
-        return Redirect::route('session.create');
-    }
 
 }

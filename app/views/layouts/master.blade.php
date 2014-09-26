@@ -55,11 +55,11 @@
                 <!-- Right Menu -->
                 <ul class="nav navbar-nav navbar-right">
                     <li><a id="button-menu-hide">Hide Menu&#9650;</a></li>
-                    @if($admin)<li><a href="#">Admin</a></li>@endif
+                    @if($admin)<li>{{ HTML::linkRoute('admin.index', 'Admin') }}</li>@endif
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Logged in as {{$username}} <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Profile</a></li>
+                            <li><a href="/profile/show">Profile</a></li>
                             <li><a href="/logout">Logout</a></li>
                         </ul>
                     </li>
@@ -73,7 +73,7 @@
         </div>
         <div class="col-sm-12">
             <button style="display:none" class="btn btn-md btn-block btn-danger" id="alert-error"></button>
-            <button class="btn btn-md btn-info btn-block" id="alert-loading">Loading Systems...</button>
+            <button style="display:none" class="btn btn-md btn-info btn-block" id="alert-loading"></button>
             <button style="display:none" class="btn btn-md btn-block btn-success" id="alert-success"></button>
         </div>
     </div>
@@ -91,12 +91,53 @@
         </div>
     </div>
 
+    <!-- Bottom Navbar -->
+    <nav class="navbar navbar-fixed-bottom navbar-inverse" role="navigation" id="display-nav-bottom1" style="display: none">
+        <!-- Bottom menu top -->
+        <div class="container-fluid">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+
+                <!-- Left Menu -->
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a><label for="input-total-points">Total Points:</label><input type="text" size="5" id="input-total-points" value="0" /></a>
+                    </li>
+                </ul>
+
+                <!-- Right Menu -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a><label for="input-total-used"><span id="input-total-used-text">Points Used:</span></span></span></label><input type="text" size="5" id="input-total-used" value="0" readonly /></a>
+                    </li>
+                    <li>
+                        <a><label for="input-total-left"><span id="input-total-left-text">Points Left:</span></label><input type="text" size="5" id="input-total-left" value="0" readonly /></a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+        <!-- Bottom menu bottom -->
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <!-- Left Menu -->
+                <ul class="nav navbar-nav">
+                    <li></li>
+                </ul>
+
+                <!-- Right Menu -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
     @yield('js')
-    <script src="js/startup.js"></script>
+    <script src="../js/startup.js"></script>
 
 </body>
 </html>

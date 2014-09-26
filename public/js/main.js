@@ -137,17 +137,36 @@ $(function () {
 });
 
 
-// Page System
+// Control System
 $(function() {
 
     var ui = {};
 
+    var input = {};
+
+    var display = {};
+
+    var total = 0;
+    var used = 0;
+    var left = 0;
+
     listen('bind', function() {
 
+        // Assignments
         ui.menuTopHide = $('#button-menu-hide');
         ui.menuTopShow = $('#button-menu-show');
         ui.menuTop = $('#display-nav-top');
+        ui.menuBottom = $('#display-nav-bottom1');
 
+        input.totalPoints = $('#input-total-points');
+        input.totalUsed = $('#input-total-used');
+        input.totalLeft = $('#input-total-left');
+
+        display.totalUsed = $('#input-total-used-text');
+        display.totalLeft = $('#input-total-left-text');
+
+
+        // Binding assignments to functions
         ui.menuTopHide.bind('click', function(e) {
             e.preventDefault();
             tell('menu-toggle');
@@ -156,13 +175,62 @@ $(function() {
             e.preventDefault();
             tell('menu-toggle');
         });
+        input.totalPoints.keyup(function() {
+            var val = input.totalPoints.val();
+            if(isNaN(val))
+            {
+                tell('alert.error', 'Total points must be a number.');
+                input.totalPoints.val('0');
+                input.totalLeft.val(0);
+            }
+            else if(parseInt(val) < 0 || parseInt(val) > 10000 || val.length < 1)
+            {
+                tell('alert.error', 'Total points must be between 0 and 10,000');
+                input.totalPoints.val('0');
+                input.totalLeft.val(0);
+            }
+            else
+            {
+                tell('adjust-points', val);
+                tell('adjust-points-display');
+            }
+        })
+
     });
 
+    // Adjusting the menu
     listen('menu-toggle', function() {
         ui.menuTopHide.toggle();
         ui.menuTopShow.toggle();
         ui.menuTop.toggle();
     });
+    listen('nav-bottom-toggle', function() {
+        ui.menuBottom.toggle();
+    });
+
+    // Adjusting points
+    listen('adjust-points-display', function() {
+        var val = total - used;
+        if(val < 0) display.totalLeft.attr('style', 'color:red');
+        else display.totalLeft.removeAttr('style');
+        if(isNaN(val)) input.totalLeft.val(0);
+        else input.totalLeft.val(val);
+    });
+    listen('adjust-points', function(val) {
+        total = val;
+    });
+    listen('adjust-used', function(val) {
+        used += val;
+        input.totalUsed.val(used);
+        tell('adjust-points-display');
+    });
+
+    // Starting functions
+    listen('fantasy-start', function() {
+        tell('menu-toggle');
+        tell('nav-bottom-toggle');
+    });
 
 });
+
 

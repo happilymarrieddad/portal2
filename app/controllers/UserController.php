@@ -72,6 +72,7 @@ class UserController extends \BaseController {
         $user->active     = true;
         $user->created_at = time();
         $user->updated_at = time();
+        $user->last_login = time();
         $user->save();
 
         if (Auth::attempt(array('email' => $email, 'password' => $pass)))
@@ -88,9 +89,10 @@ class UserController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show()
 	{
-		//
+        if(!Auth::check()) return Redirect::route('session.create');
+        else return View::make('user.show');
 	}
 
 
@@ -100,9 +102,10 @@ class UserController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit()
 	{
-		//
+        if(!Auth::check()) return Redirect::route('session.create');
+        else return View::make('user.edit');
 	}
 
 

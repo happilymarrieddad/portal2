@@ -8,8 +8,12 @@ $(function() {
 
 
 
-        tell('menu-toggle');
 
+
+    });
+    
+    listen('start', function() {
+        tell('fantasy-start');
     });
 
 });
