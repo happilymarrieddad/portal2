@@ -29,6 +29,7 @@
                         <span style="color:red">{{ $error }}</span>
                         @endforeach
                     @endif
+                    {{$msg}}<br />
                     <button type="submit" class="btn btn-primary">Login</button>
                     {{ HTML::linkRoute('user.create', 'Create a new account', array(), array('style'=>'color:red', 'class'=>'pull-right')) }}
                 </div>

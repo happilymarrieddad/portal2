@@ -21,7 +21,7 @@ class SessionController extends \BaseController {
 	public function create()
 	{
         if(Auth::check()) return Redirect::route('home.index');
-		return View::make('session.create');
+		return View::make('session.create')->with('msg', '');
 	}
 
 
@@ -41,7 +41,7 @@ class SessionController extends \BaseController {
             $user->save();
             return Redirect::route('home.index');
         }
-        else Redirect::route('session.create');
+        return View::make('session.create')->with('msg', '<span style="color: red">Login failed... please verify credentials</span>');
 	}
 
 
