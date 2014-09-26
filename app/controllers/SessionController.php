@@ -41,7 +41,7 @@ class SessionController extends \BaseController {
             $user->save();
             return Redirect::route('home.index');
         }
-        else Redirect::back();
+        else Redirect::route('session.create');
 	}
 
 
