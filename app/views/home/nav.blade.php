@@ -12,10 +12,8 @@
     <div class="panel-heading">
         <h3 class="panel-title">Menu</h3>
     </div>
-    <div class="panel-body">
-        <ul class="list-unstyled">
-            <li><a class="@yield('home-active')" href="/">Home</a></li>
-        </ul>
+    <div class="list-group">
+        <a class="list-group-item @yield('home-active')" href="/">Home</a>
     </div>
 </div>
 @stop

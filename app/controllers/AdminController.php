@@ -10,7 +10,7 @@ class AdminController extends \BaseController {
 	public function index()
 	{
 		if(!Auth::check() || !Auth::user()->admin) return Redirect::route('home.index');
-        else return View::make('admin.index');
+        else return View::make('admin.index')->with('users', User::all());
 	}
 
 
@@ -42,9 +42,10 @@ class AdminController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show()
 	{
-		//
+        if(!Auth::check() || !Auth::user()->admin) return Redirect::route('home.index');
+        else return View::make('admin.show')->with('users', User::all());
 	}
 
 

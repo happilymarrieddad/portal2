@@ -34,7 +34,10 @@ Route::get('/profile/password', 'PasswordController@edit');
 Route::post('/profile/passUpdate', 'PasswordController@update');
 Route::post('/profile/update', 'UserController@update');
 Route::resource('user', 'UserController');
-Route::resource('admin', 'AdminController', ['only'=>['index']]);
+
+Route::get('/admin/index', 'AdminController@index');
+Route::get('/admin/show', 'AdminController@show');
+Route::resource('admin', 'AdminController', ['only'=>['index','show']]);
 
 // Catches any missing routes the user decides to try
 App::missing(function() {
